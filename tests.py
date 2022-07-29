@@ -60,3 +60,5 @@ file = open('new_text.txt', 'r')
 print(file.read())
 
 print("Ну ты валера и чмо")
+
+x = 10/56
