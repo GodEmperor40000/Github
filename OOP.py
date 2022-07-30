@@ -16,3 +16,5 @@ Building2.stairs = 21
 Building2.num_of_pepople = 1000
 
 Building2.info()
+
+print("Hellow")
