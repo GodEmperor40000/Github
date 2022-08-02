@@ -62,3 +62,38 @@ print(file.read())
 print("Ну ты валера и чмо")
 
 x = 10/56
+
+a = (1, 2, 5)
+
+print(type(a))
+
+def Euklid_alg(a:int, b:int):
+    while a!=0 and b!=0:
+        if a < b:
+            a,b=b,a
+        a%=b
+
+    return a+b
+
+print(Euklid_alg(8,4))
+
+def Resheto_eratosfena(a:int):
+    if a <= 2:
+        return f'Ну ты приколист'
+    mask = [1]*(a-1)
+    numbers = list()
+
+    for i in range(2, int(a/2)):
+        t=2*i
+
+        while t <=a:
+            mask[t-2]=0
+            t+=i
+
+    for i in range(len(mask)):
+        if mask[i]!=0:
+            numbers.append(i+2)
+
+    return numbers
+
+print(Resheto_eratosfena(100))
