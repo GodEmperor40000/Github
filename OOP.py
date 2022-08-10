@@ -1,9 +1,9 @@
-def openDoor(num_of_people):
-        print(f'door was opened {num_of_people} times')
+
 
 class Building:
     stairs = 0
-    pass
+    def openDoor(num_of_people):
+        print(f'door was opened {num_of_people} times')
 
 class HouseBuilding(Building):
 
@@ -15,7 +15,7 @@ class HouseBuilding(Building):
        print(f'Number of stairs in the building: {self.stairs}; Number of appartments in the building: {self.num_of_appartments}') 
 
     def enterBuilding(self,num_of_people):
-        openDoor(num_of_people)
+        self.openDoor(num_of_people)
         print(f'{num_of_people} people are in the House Building')
 
 class OfficeBuilding(Building):
@@ -28,7 +28,7 @@ class OfficeBuilding(Building):
         print(f'Number of stairs in the Office building: {self.stairs}; Number of offices in the building: {self.num_of_offices}')
 
     def enterBuilding(self, num_of_people):
-        openDoor(num_of_people)
+        self.openDoor(num_of_people)
         print(f'{num_of_people} people are working in the Office building')
 
 Building1 = Building()
